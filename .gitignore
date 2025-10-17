@@ -1,0 +1,56 @@
+# =========
+# Sistema
+# =========
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# =================
+# IDEs / Editores
+# =================
+.idea/
+*.iml
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# ============================
+# Node / Angular (cualquier carpeta)
+# ============================
+**/node_modules/
+**/dist/
+**/out-tsc/
+**/.angular/cache/
+**/.vite/
+**/.cache/
+**/.eslintcache
+**/coverage/
+
+# ============================
+# Java / Maven (cualquier carpeta)
+# ============================
+**/target/
+**/*.log
+hs_err_pid*
+
+# ==========
+# Entornos
+# ==========
+.env
+.env.*
+!.env.example
+
+# ==========
+# Docker (opc)
+# ==========
+docker-compose.override.yml
+*.local.yml
+
+# ==========
+# Archivos
+# ==========
+*.zip
+*.tar
+*.tar.gz
