@@ -1,0 +1,58 @@
+Instalación Angular:
+```
+C:\Users\pedro\dev\github\clases_particulares>npm create @angular@latest frontend
+Need to install the following packages:
+@angular/create@20.3.6
+Ok to proceed? (y) y
+
+
+> npx
+> create frontend
+
+
+Would you like to share pseudonymous usage data about this project with the Angular Team
+at Google under Google's Privacy Policy at https://policies.google.com/privacy. For more
+details and how to change this setting, see https://angular.dev/cli/analytics.
+
+   Yes
+
+Thank you for sharing pseudonymous usage data. Should you change your mind, the following
+command will disable this feature entirely:
+
+    ng analytics disable --global
+
+Global setting: enabled
+Local setting: No local workspace configuration file.
+Effective status: enabled
+√ Which stylesheet format would you like to use? Sass (SCSS)     [ https://sass-lang.com/documentation/syntax#scss
+          ]
+√ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? Yes
+√ Do you want to create a 'zoneless' application without zone.js? No
+√ Which AI tools do you want to configure with Angular best practices? https://angular.dev/ai/develop-with-ai None
+CREATE frontend/angular.json (2881 bytes)
+CREATE frontend/package.json (1360 bytes)
+CREATE frontend/README.md (1530 bytes)
+CREATE frontend/tsconfig.json (1026 bytes)
+CREATE frontend/.editorconfig (331 bytes)
+CREATE frontend/.gitignore (647 bytes)
+CREATE frontend/tsconfig.app.json (464 bytes)
+CREATE frontend/tsconfig.spec.json (422 bytes)
+CREATE frontend/.vscode/extensions.json (134 bytes)
+CREATE frontend/.vscode/launch.json (490 bytes)
+CREATE frontend/.vscode/tasks.json (980 bytes)
+CREATE frontend/src/main.ts (228 bytes)
+CREATE frontend/src/index.html (307 bytes)
+CREATE frontend/src/styles.scss (81 bytes)
+CREATE frontend/src/main.server.ts (300 bytes)
+CREATE frontend/src/server.ts (1677 bytes)
+CREATE frontend/src/app/app.spec.ts (689 bytes)
+CREATE frontend/src/app/app.ts (303 bytes)
+CREATE frontend/src/app/app.scss (0 bytes)
+CREATE frontend/src/app/app.html (20464 bytes)
+CREATE frontend/src/app/app.config.ts (541 bytes)
+CREATE frontend/src/app/app.routes.ts (80 bytes)
+CREATE frontend/src/app/app.config.server.ts (438 bytes)
+CREATE frontend/src/app/app.routes.server.ts (174 bytes)
+CREATE frontend/public/favicon.ico (15086 bytes)
+√ Packages installed successfull
+```
