@@ -1,0 +1,46 @@
+<h1>Contacto</h1>
+<p>Cuéntame qué necesitas y te respondo lo antes posible.</p>
+
+<form [formGroup]="form" (ngSubmit)="submit()" novalidate class="card">
+  <label>
+    <span>Nombre*</span>
+    <input type="text" formControlName="nombre" />
+    @if (form.controls.nombre.touched && form.controls.nombre.invalid) {
+      <small class="error">Introduce al menos 2 caracteres.</small>
+    }
+  </label>
+
+  <label>
+    <span>Email*</span>
+    <input type="email" formControlName="email" />
+    @if (form.controls.email.touched && form.controls.email.invalid) {
+      <small class="error">Email no válido.</small>
+    }
+  </label>
+
+  <label>
+    <span>Teléfono (opcional)</span>
+    <input type="tel" formControlName="telefono" />
+  </label>
+
+  <label>
+    <span>Mensaje*</span>
+    <textarea rows="5" formControlName="mensaje"></textarea>
+    @if (form.controls.mensaje.touched && form.controls.mensaje.invalid) {
+      <small class="error">Cuéntame con un poco más de detalle (mín. 10).</small>
+    }
+  </label>
+
+  <label class="check">
+    <input type="checkbox" formControlName="acepta" />
+    <span>Acepto la política de privacidad*</span>
+  </label>
+  @if (form.controls.acepta.touched && form.controls.acepta.invalid) {
+    <small class="error">Debes aceptar la política.</small>
+  }
+
+  <button type="submit" [disabled]="sending()">Enviar</button>
+
+  @if (sentOk())     { <p class="ok">¡Mensaje enviado! Te responderé pronto.</p> }
+  @if (sentError())  { <p class="error">{{ sentError() }}</p> }
+</form>

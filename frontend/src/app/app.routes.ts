@@ -9,7 +9,12 @@ export const routes: Routes = [
   {
     path: 'contact',
     loadComponent: () =>
-      import('./pages/contact/contact').then(p => p.Contact)
+      import('./pages/contact/contact.component').then(p => p.ContactComponent)
+  },
+  {
+    path: 'packs',
+    loadComponent: () =>
+      import('./pages/packs/packs.component').then(p => p.PacksComponent)
   },
   { path: '**', redirectTo: '' }
 ];

@@ -1,0 +1,23 @@
+.table-wrap { overflow-x: auto; }
+
+.packs-table {
+  width: 100%;
+  border-collapse: collapse;
+  th, td { padding: .75rem; border-bottom: 1px solid #e5e7eb; text-align: left; }
+  thead th { background: #f8fafc; font-weight: 600; }
+  tbody tr:hover { background: #f9fafb; }
+}
+
+/* responsive en móviles: pila los labels */
+@media (max-width: 640px) {
+  thead { display:none; }
+  .packs-table, .packs-table tbody, .packs-table tr, .packs-table td { display: block; width: 100%; }
+  .packs-table tr { margin-bottom: .75rem; border: 1px solid #e5e7eb; border-radius: .5rem; overflow: hidden; }
+  .packs-table td { border-bottom: 1px solid #e5e7eb; }
+  .packs-table td:last-child { border-bottom: 0; }
+  .packs-table td::before { content: attr(data-label) " "; font-weight: 600; display: block; margin-bottom: .25rem; color: #334155; }
+}
+
+.hint { color:#475569; margin-bottom: .75rem; }
+.note { color:#64748b; font-size: .9rem; margin-top: .5rem; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }

@@ -1,0 +1,38 @@
+<h1>Packs y ofertas</h1>
+<p class="hint">Elige el pack que mejor encaje: más horas → mejor precio por hora.</p>
+
+<div class="table-wrap" role="region" aria-labelledby="packs-title" tabindex="0">
+  <table class="packs-table">
+    <caption id="packs-title" class="sr-only">Tabla de packs y precios</caption>
+    <thead>
+      <tr>
+        <th>Pack</th>
+        <th>Horas</th>
+        <th>Precio/hora</th>
+        <th>Total</th>
+        <th>Ahorro</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (p of packs(); track p.id) {
+        <tr>
+          <td data-label="Pack">{{ p.nombre }}</td>
+          <td data-label="Horas">{{ p.horas }}</td>
+          <td data-label="Precio/hora">{{ p.precioHora | currency:'EUR':'symbol':'1.2-2' }}</td>
+          <td data-label="Total">{{ total(p) | currency:'EUR' }}</td>
+          <td data-label="Ahorro">
+            @if (p.precioHoraAntes) {
+              {{ ahorroPct(p) | number:'1.0-0' }}%
+            } @else {
+              —
+            }
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<p class="note">
+  * El “Ahorro” se calcula frente a un PVP de {{ packs()[0].precioHoraAntes | currency:'EUR' }}/h.
+</p>
