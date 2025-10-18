@@ -1,0 +1,48 @@
+:root {
+  --bg: #0f172a;       // header/footer
+  --fg: #e2e8f0;       // texto claro
+  --link: #93c5fd;     // enlaces
+  --active: #ffffff;   // enlace activo
+  --container: 980px;
+}
+
+* { box-sizing: border-box; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.site-header, .site-footer {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.brand {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--fg);
+  margin-right: 1rem;
+}
+
+.main-nav {
+  display: inline-flex;
+  gap: 1rem;
+
+  a {
+    text-decoration: none;
+    color: var(--link);
+    padding: .25rem .5rem;
+    border-radius: .375rem;
+
+    &.active {
+      color: var(--active);
+      text-decoration: underline;
+    }
+  }
+}
+
+main.container {
+  padding-block: 2rem;
+}
